@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-hotel-table
+      author: liashevich
+      changes:
+        - createTable:
+            tableName: hotel
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+              - column:
+                  name: description
+                  type: CLOB
+              - column:
+                  name: brand
+                  type: varchar(200)
+              - column:
+                  name: address_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: address-hotel-fk
+                    referencedTableName: address
+                    referencedColumnNames: id
+              - column:
+                  name: arrival_time_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: arrival-time-hotel-fk
+                    referencedTableName: arrival_time
+                    referencedColumnNames: id
+              - column:
+                  name: contacts_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: contacts-hotel-fk
+                    referencedTableName: contacts
+                    referencedColumnNames: id
+

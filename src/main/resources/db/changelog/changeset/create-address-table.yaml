@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tables
+      author: liashevich
+      changes:
+        - createTable:
+            tableName: address
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: house_number
+                  type: varchar(200)
+              - column:
+                  name: street
+                  type: varchar(200)
+              - column:
+                  name: city
+                  type: varchar(200)
+              - column:
+                  name: country
+                  type: varchar(200)
+              - column:
+                  name: post_code
+                  type: varchar(200)
+

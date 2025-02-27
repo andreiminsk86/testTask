@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-arrival-time
+      author: liashevich
+      changes:
+        - createTable:
+            tableName: arrival_time
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: check_in
+                  type: varchar(200)
+              - column:
+                  name: check_out
+                  type: varchar(200)

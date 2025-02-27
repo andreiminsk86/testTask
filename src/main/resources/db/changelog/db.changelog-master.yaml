@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-address-table.yaml
+  - include:
+      file: db/changelog/changeset/create-arrival-time-table.yaml
+  - include:
+      file: db/changelog/changeset/create-contacts-table.yaml
+  - include:
+      file: db/changelog/changeset/create-hotel-table.yaml
+  - include:
+      file: db/changelog/changeset/create-amenities-table.yaml
